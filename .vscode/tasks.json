@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build-dke-hud",
+			"type": "shell",
+			"command": "C:\\flutter\\bin\\flutter.bat build apk --debug",
+			"isBackground": false
+		},
+		{
+			"label": "build-dke-v16",
+			"type": "shell",
+			"command": "powershell.exe -ExecutionPolicy Bypass -File \"d:\\DKE\\DKE-HUD\\src\\build_and_archive.ps1\" -deploy 3f82acea",
+			"isBackground": false
+		}
+	]
+}

@@ -1,0 +1,72 @@
+name: eva_hud_app
+description: EVA NERV Battle HUD — Standalone App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── 蓝牙 ──
+  flutter_bluetooth_serial: ^0.4.0   # Android SPP
+  flutter_blue_plus: ^1.32.0         # iOS BLE
+
+  # ── 权限 ──
+  permission_handler: ^11.3.1
+
+  # ── 数据持久化 ──
+  shared_preferences: ^2.3.4
+
+  # ── 壁纸选择 ──
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
+
+  # ── 音效 ──
+  audioplayers: ^6.1.0
+
+  # ── OLED 增强 (可选，不装也不崩) ──
+  wakelock_plus: ^1.2.8
+  screen_brightness: ^1.0.1
+  
+  file_picker: ^8.3.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sfx/
+    - assets/profiles/
+  fonts:
+  - family: MatissePro
+    fonts:
+      - asset: assets/fonts/MatissePro-L.otf
+        weight: 300
+      - asset: assets/fonts/MatissePro-M.otf
+        weight: 400
+      - asset: assets/fonts/MatissePro-DB.otf
+        weight: 600
+      - asset: assets/fonts/MatissePro-B.otf
+        weight: 700
+      - asset: assets/fonts/MatissePro-EB.otf
+        weight: 800
+      - asset: assets/fonts/MatissePro-UB.otf
+        weight: 900
+    
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "app_icon.png"
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "app_icon.png"
+
+  # 如果你有自定义字体，在这里加：
